@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "ProviderManifest.h"
-#include <winmeta.h>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
