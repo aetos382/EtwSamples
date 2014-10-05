@@ -10,4 +10,4 @@ wevtutil.exe um "%manifest%"
 popd
 endlocal
 
-exit
+exit /b

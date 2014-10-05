@@ -11,4 +11,4 @@ wevtutil.exe im "%manifest%" /rf:"%resource%" /mf:"%resource%" /pf:"%resource%"
 popd
 endlocal
 
-exit
+exit /b
