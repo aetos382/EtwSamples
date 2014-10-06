@@ -17,7 +17,7 @@
         parameterFileName="Provider0.exe">
 
         <events>
-          <event value="1" message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+          <event value="1" symbol="EVENTDESC_Hello"/>
         </events>
 
       </provider>
@@ -25,13 +25,5 @@
     </events>
 
   </instrumentation>
-
-  <localization>
-    <resources culture="ja-JP" xml:lang="ja-JP">
-      <stringTable>
-        <string id="Event.Hello" value="はろー"/>
-      </stringTable>
-    </resources>
-  </localization>
 
 </instrumentationManifest>
