@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0CA1B674-8E2D-467A-8B39-0CEE6A33DD00}</ProjectGuid>
+    <ProjectGuid>{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Provider1</RootNamespace>
+    <RootNamespace>Provider0</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -58,9 +58,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)ProviderManifest1.man" "$(OutDir)"
-copy /Y "$(ProjectDir)RegisterProvider1.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider1.cmd" "$(OutDir)"</Command>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest0.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider0.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider0.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace0.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,9 +81,10 @@ copy /Y "$(ProjectDir)UnregisterProvider1.cmd" "$(OutDir)"</Command>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)ProviderManifest1.man" "$(OutDir)"
-copy /Y "$(ProjectDir)RegisterProvider1.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider1.cmd" "$(OutDir)"</Command>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest0.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider0.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider0.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace0.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -94,31 +96,27 @@ copy /Y "$(ProjectDir)UnregisterProvider1.cmd" "$(OutDir)"</Command>
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Provider1.cpp" />
+    <ClCompile Include="Provider0.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="UnregisterProvider1.cmd" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="RegisterProvider1.cmd" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="ProviderManifest1.man">
-      <FileType>XML</FileType>
+    <CustomBuild Include="ProviderManifest0.man">
+      <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mc.exe -n -u -c "%(FullPath)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mc.exe -n -u -c "%(FullPath)"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
-      <DeploymentContent>true</DeploymentContent>
       <SubType>Designer</SubType>
     </CustomBuild>
+    <None Include="RegisterProvider0.cmd" />
+    <None Include="trace0.cmd" />
+    <None Include="UnregisterProvider0.cmd" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Provider1.rc" />
+    <ResourceCompile Include="Provider0.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

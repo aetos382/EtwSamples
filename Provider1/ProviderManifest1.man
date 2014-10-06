@@ -12,9 +12,9 @@
         guid="{3E7764B2-10E3-4396-87D7-0B3A81038806}"
         name="SampleProvider1"
         symbol="PROVIDERID_SampleProvider1"
-        resourceFileName="Provider.exe"
-        messageFileName="Provider.exe"
-        parameterFileName="Provider.exe">
+        resourceFileName="Provider1.exe"
+        messageFileName="Provider1.exe"
+        parameterFileName="Provider1.exe">
 
         <channels>
           <channel chid="1" name="Test" type="Admin" enabled="true"/>

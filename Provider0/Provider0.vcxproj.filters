@@ -16,8 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
-    <Text Include="RegisterProvider1.cmd" />
-    <Text Include="UnregisterProvider1.cmd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,17 +32,22 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Provider1.cpp">
+    <ClCompile Include="Provider0.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Provider1.rc">
+    <None Include="RegisterProvider0.cmd" />
+    <None Include="UnregisterProvider0.cmd" />
+    <None Include="trace0.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Provider0.rc">
       <Filter>リソース ファイル</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ProviderManifest1.man">
+    <CustomBuild Include="ProviderManifest0.man">
       <Filter>ソース ファイル</Filter>
     </CustomBuild>
   </ItemGroup>

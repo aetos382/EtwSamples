@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instrumentationManifest
+  xmlns="http://schemas.microsoft.com/win/2004/08/events"
+  xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <instrumentation>
+
+    <events>
+
+      <provider
+        guid="{FF5D07C6-03BA-481F-B07F-97CB8A51FADF}"
+        name="SampleProvider0"
+        symbol="PROVIDERID_SampleProvider0"
+        resourceFileName="Provider0.exe"
+        messageFileName="Provider0.exe"
+        parameterFileName="Provider0.exe">
+
+        <events>
+          <event value="1" message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+        </events>
+
+      </provider>
+
+    </events>
+
+  </instrumentation>
+
+  <localization>
+    <resources culture="ja-JP" xml:lang="ja-JP">
+      <stringTable>
+        <string id="Event.Hello" value="はろー"/>
+      </stringTable>
+    </resources>
+  </localization>
+
+</instrumentationManifest>
