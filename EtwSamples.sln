@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Provider1", "Provider1\Prov
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Provider0", "Provider0\Provider0.vcxproj", "{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Controller1", "Controller1\Controller1.vcxproj", "{9A07D699-1B3D-4871-AB6A-7B4F3B111C38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B} = {B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +26,10 @@ Global
 		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}.Debug|Win32.Build.0 = Debug|Win32
 		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}.Release|Win32.ActiveCfg = Release|Win32
 		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}.Release|Win32.Build.0 = Release|Win32
+		{9A07D699-1B3D-4871-AB6A-7B4F3B111C38}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9A07D699-1B3D-4871-AB6A-7B4F3B111C38}.Debug|Win32.Build.0 = Debug|Win32
+		{9A07D699-1B3D-4871-AB6A-7B4F3B111C38}.Release|Win32.ActiveCfg = Release|Win32
+		{9A07D699-1B3D-4871-AB6A-7B4F3B111C38}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
