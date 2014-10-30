@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instrumentationManifest
+  xmlns="http://schemas.microsoft.com/win/2004/08/events"
+  xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <instrumentation>
+
+    <events>
+
+      <provider
+        guid="{824E8551-8E4C-43E3-B16A-9FEC1A7632BA}"
+        name="SampleProvider3"
+        symbol="PROVIDERID_SampleProvider3"
+        resourceFileName="Provider3.exe"
+        messageFileName="Provider3.exe"
+        parameterFileName="Provider3.exe">
+
+        <channels>
+          <channel chid="1" name="Test" type="Admin" enabled="true"/>
+        </channels>
+
+        <templates>
+          <template tid="t1"></template>
+        </templates>
+
+        <events>
+          <event value="1" channel="1" level="win:Informational" message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+        </events>
+
+      </provider>
+
+    </events>
+
+  </instrumentation>
+
+  <localization>
+    <resources culture="ja-JP" xml:lang="ja-JP">
+      <stringTable>
+        <string id="Event.Hello" value="はろー"/>
+      </stringTable>
+    </resources>
+  </localization>
+
+</instrumentationManifest>
