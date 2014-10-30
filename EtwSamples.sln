@@ -22,6 +22,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Consumer1", "Consumer1\Cons
 		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B} = {B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Controller2", "Controller2\Controller2.vcxproj", "{46D494D7-01B5-4D0C-A597-C913D1199060}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B} = {B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Consumer2", "Consumer2\Consumer2.vcxproj", "{978841B4-52B9-4913-95FC-2F2EAC6BABC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B30ACFB0-B97D-4962-B9E7-0BE22E812C1B} = {B30ACFB0-B97D-4962-B9E7-0BE22E812C1B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -44,6 +54,14 @@ Global
 		{2E2C2BF8-A72A-46CE-A33C-87E56DD8243C}.Debug|Win32.Build.0 = Debug|Win32
 		{2E2C2BF8-A72A-46CE-A33C-87E56DD8243C}.Release|Win32.ActiveCfg = Release|Win32
 		{2E2C2BF8-A72A-46CE-A33C-87E56DD8243C}.Release|Win32.Build.0 = Release|Win32
+		{46D494D7-01B5-4D0C-A597-C913D1199060}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46D494D7-01B5-4D0C-A597-C913D1199060}.Debug|Win32.Build.0 = Debug|Win32
+		{46D494D7-01B5-4D0C-A597-C913D1199060}.Release|Win32.ActiveCfg = Release|Win32
+		{46D494D7-01B5-4D0C-A597-C913D1199060}.Release|Win32.Build.0 = Release|Win32
+		{978841B4-52B9-4913-95FC-2F2EAC6BABC5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{978841B4-52B9-4913-95FC-2F2EAC6BABC5}.Debug|Win32.Build.0 = Debug|Win32
+		{978841B4-52B9-4913-95FC-2F2EAC6BABC5}.Release|Win32.ActiveCfg = Release|Win32
+		{978841B4-52B9-4913-95FC-2F2EAC6BABC5}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
