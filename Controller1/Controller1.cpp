@@ -39,7 +39,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	_getwch();
 
 	result = EnableTraceEx(&PROVIDERID_SampleProvider0, NULL, traceHandle, 0, 0, 0, 0, 0, NULL);
-	result = StopTrace(traceHandle, sessionName, prop);
+	result = StopTrace(traceHandle, NULL, prop);
 
 	return 0;
 }
