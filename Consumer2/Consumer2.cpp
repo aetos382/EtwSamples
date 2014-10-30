@@ -9,7 +9,7 @@ VOID WINAPI EventRecordCallback(_In_ PEVENT_RECORD eventRecord);
 int _tmain(int argc, _TCHAR* argv[])
 {
 	EVENT_TRACE_LOGFILE logFile = {};
-	logFile.LogFileName = L"Controller2.etl";
+	logFile.LogFileName = NULL;
 	logFile.LoggerName = L"EtwSamples.Controller2";
 	logFile.ProcessTraceMode =
 		PROCESS_TRACE_MODE_EVENT_RECORD | PROCESS_TRACE_MODE_REAL_TIME;

@@ -10,7 +10,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	EVENT_TRACE_LOGFILE logFile = {};
 	logFile.LogFileName = L"Controller1.etl";
-	logFile.LoggerName = L"EtwSamples.Controller1";
+	logFile.LoggerName = NULL;
 	logFile.ProcessTraceMode =
 		PROCESS_TRACE_MODE_EVENT_RECORD;
 	logFile.EventRecordCallback = &EventRecordCallback;
