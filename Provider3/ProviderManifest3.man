@@ -2,7 +2,8 @@
 <instrumentationManifest
   xmlns="http://schemas.microsoft.com/win/2004/08/events"
   xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:my="http://aerie.jp/schemas/etw/samples/my">
 
   <instrumentation>
 
@@ -14,18 +15,42 @@
         symbol="PROVIDERID_SampleProvider3"
         resourceFileName="Provider3.exe"
         messageFileName="Provider3.exe"
-        parameterFileName="Provider3.exe">
+        parameterFileName="Provider3.exe"
+        message="$(string.Provider.SampleProvider3)">
 
         <channels>
-          <channel chid="1" name="Test" type="Admin" enabled="true"/>
+          <channel chid="ch1" name="Admin" type="Admin" enabled="true" message="$(string.Channel.Ch1)"/>
+          <channel chid="ch2" name="Operational" type="Operational" enabled="true" message="$(string.Channel.Ch2)"/> 
         </channels>
 
+        <tasks>
+          <task name="my:Demonstration" value="1" message="$(string.Task.Demonstration)">
+            <opcodes>
+              <opcode name="my:Operation1" value="11" message="$(string.Opcode.Demonstration.Operation1)"/>
+            </opcodes>
+          </task>
+        </tasks>
+        
+        <levels>
+          <level name="my:Yabai" value="16" message="$(string.Level.Yabai)"/>
+        </levels>
+        
+        <keywords>
+          <keyword name="my:Hoge" mask="0x1" message="$(string.Message.Hoge)"/>
+          <keyword name="my:Hige" mask="0x2" message="$(string.Message.Hige)"/>
+        </keywords>
+          
         <templates>
           <template tid="t1"></template>
         </templates>
 
         <events>
-          <event value="1" channel="1" level="win:Informational" message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+          <event value="1" channel="ch1"
+                 level="win:Informational" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
+                 message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+          <event value="2" channel="ch2"
+                 level="my:Yabai" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
+                 message="$(string.Event.Hello2)" symbol="EVENTDESC_Hello2"/>
         </events>
 
       </provider>
@@ -38,6 +63,15 @@
     <resources culture="ja-JP" xml:lang="ja-JP">
       <stringTable>
         <string id="Event.Hello" value="はろー"/>
+        <string id="Event.Hello2" value="はろー２"/>
+        <string id="Provider.SampleProvider3" value="さんぷるぷろばいだー３"/>
+        <string id="Channel.Ch1" value="あどみん"/>
+        <string id="Channel.Ch2" value="おぺれーしょなる"/>
+        <string id="Task.Demonstration" value="でも"/>
+        <string id="Opcode.Demonstration.Operation1" value="おぺ"/>
+        <string id="Level.Yabai" value="やばい"/>
+        <string id="Message.Hoge" value="ほげ"/>
+        <string id="Message.Hige" value="ひげ"/>
       </stringTable>
     </resources>
   </localization>
