@@ -46,4 +46,8 @@
       <Filter>リソース ファイル</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RegisterProvider3.cmd" />
+    <None Include="UnregisterProvider3.cmd" />
+  </ItemGroup>
 </Project>

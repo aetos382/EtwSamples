@@ -96,6 +96,11 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -109,6 +114,11 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -126,6 +136,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -143,6 +158,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -177,6 +197,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Provider3.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RegisterProvider3.cmd" />
+    <None Include="UnregisterProvider3.cmd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

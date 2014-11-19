@@ -48,6 +48,7 @@
           <event value="1" channel="ch1"
                  level="win:Informational" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
                  message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
+          
           <event value="2" channel="ch2"
                  level="my:Yabai" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
                  message="$(string.Event.Hello2)" symbol="EVENTDESC_Hello2"/>

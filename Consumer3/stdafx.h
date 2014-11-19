@@ -13,3 +13,4 @@
 
 #include <Windows.h>
 #include <Evntcons.h>
+#include <tdh.h>
