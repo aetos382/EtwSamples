@@ -99,7 +99,8 @@
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
 copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace3.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,7 +118,8 @@ copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
 copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace3.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -139,7 +141,8 @@ copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
 copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace3.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -161,7 +164,8 @@ copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)ProviderManifest3.man" "$(OutDir)"
 copy /Y "$(ProjectDir)RegisterProvider3.cmd" "$(OutDir)"
-copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
+copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace3.cmd" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -200,6 +204,7 @@ copy /Y "$(ProjectDir)UnregisterProvider3.cmd" "$(OutDir)"</Command>
   </ItemGroup>
   <ItemGroup>
     <None Include="RegisterProvider3.cmd" />
+    <None Include="trace3.cmd" />
     <None Include="UnregisterProvider3.cmd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

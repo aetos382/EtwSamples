@@ -49,5 +49,6 @@
   <ItemGroup>
     <None Include="RegisterProvider3.cmd" />
     <None Include="UnregisterProvider3.cmd" />
+    <None Include="trace3.cmd" />
   </ItemGroup>
 </Project>

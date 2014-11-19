@@ -3,19 +3,17 @@
 setlocal
 pushd "%~dp0"
 
-set name=trace_test0
-set guid={FF5D07C6-03BA-481F-B07F-97CB8A51FADF}
+set name=trace_test3
+set guid={824E8551-8E4C-43E3-B16A-9FEC1A7632BA}
 
 if exist "%~dp0%name%*.etl" del "%~dp0%name%*.etl"
 if exist "%~dp0%name%*.xml" del "%~dp0%name%*.xml"
 
 logman start trace %name% -p %guid% -o "%~dp0%name%.etl" -ets
 
-Provider0.exe
+Provider3.exe
 
 logman stop "%name%" -ets
-
-tracerpt "%~dp0%name%.etl" -o "%~dp0%name%.xml"
 
 popd
 endlocal
