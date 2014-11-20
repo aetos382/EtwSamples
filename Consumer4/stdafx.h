@@ -9,7 +9,9 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <locale.h>
+#include <stdlib.h>
 
-
-
-// TODO: プログラムに必要な追加ヘッダーをここで参照してください。
+#include <Windows.h>
+#include <Evntcons.h>
+#include <tdh.h>
