@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <tchar.h>
 #include <locale.h>
+#include <stdlib.h>
 
 #include <Windows.h>
 #include <Evntcons.h>
