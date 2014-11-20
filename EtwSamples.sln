@@ -42,6 +42,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Provider4", "Provider4\Provider4.vcxproj", "{3C7F1E22-92FD-4ABE-8325-75860E694803}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Consumer4", "Consumer4\Consumer4.vcxproj", "{5D4A3940-A97B-482F-AED2-D78E90804EB2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C7F1E22-92FD-4ABE-8325-75860E694803} = {3C7F1E22-92FD-4ABE-8325-75860E694803}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{21FEF97A-56DE-4384-BF69-50D5323DCA4F}"
 EndProject

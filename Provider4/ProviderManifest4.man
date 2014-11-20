@@ -10,17 +10,16 @@
     <events>
 
       <provider
-        guid="{824E8551-8E4C-43E3-B16A-9FEC1A7632BA}"
-        name="SampleProvider3"
-        symbol="PROVIDERID_SampleProvider3"
-        resourceFileName="Provider3.exe"
-        messageFileName="Provider3.exe"
-        parameterFileName="Provider3.exe"
-        message="$(string.Provider.SampleProvider3)">
+        guid="{6FD882EA-3844-4527-A251-E6C71E064C37}"
+        name="SampleProvider4"
+        symbol="PROVIDERID_SampleProvider4"
+        resourceFileName="Provider4.exe"
+        messageFileName="Provider4.exe"
+        parameterFileName="Provider4.exe"
+        message="$(string.Provider.SampleProvider4)">
 
         <channels>
-          <channel chid="ch1" name="{824E8551-8E4C-43E3-B16A-9FEC1A7632BA}/Admin" type="Admin" enabled="true" message="$(string.Channel.Ch1)"/>
-          <channel chid="ch2" name="{824E8551-8E4C-43E3-B16A-9FEC1A7632BA}/Operational" type="Operational" enabled="true" message="$(string.Channel.Ch2)"/> 
+          <channel chid="ch1" name="{6FD882EA-3844-4527-A251-E6C71E064C37}/Admin" type="Admin" enabled="true" message="$(string.Channel.Ch1)"/>
         </channels>
 
         <tasks>
@@ -30,28 +29,23 @@
             </opcodes>
           </task>
         </tasks>
-        
-        <levels>
-          <level name="my:Yabai" value="16" message="$(string.Level.Yabai)"/>
-        </levels>
-        
+
         <keywords>
           <keyword name="my:Hoge" mask="0x1" message="$(string.Message.Hoge)"/>
           <keyword name="my:Hige" mask="0x2" message="$(string.Message.Hige)"/>
         </keywords>
-          
+
         <templates>
-          <template tid="t1"></template>
+          <template tid="t1">
+            <data name="name" inType="win:UnicodeString"/>
+            <data name="score" inType="win:UInt32"/>
+          </template>
         </templates>
 
         <events>
           <event value="1" channel="ch1"
                  level="win:Informational" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
                  message="$(string.Event.Hello)" symbol="EVENTDESC_Hello"/>
-          
-          <event value="2" channel="ch2"
-                 level="my:Yabai" task="my:Demonstration" opcode="my:Operation1" version="1" keywords="my:Hoge my:Hige" template="t1"
-                 message="$(string.Event.Hello2)" symbol="EVENTDESC_Hello2"/>
         </events>
 
       </provider>
@@ -64,13 +58,10 @@
     <resources culture="ja-JP" xml:lang="ja-JP">
       <stringTable>
         <string id="Event.Hello" value="はろー"/>
-        <string id="Event.Hello2" value="はろー２"/>
-        <string id="Provider.SampleProvider3" value="さんぷるぷろばいだー３"/>
+        <string id="Provider.SampleProvider4" value="さんぷるぷろばいだー４"/>
         <string id="Channel.Ch1" value="あどみん"/>
-        <string id="Channel.Ch2" value="おぺれーしょなる"/>
         <string id="Task.Demonstration" value="でも"/>
         <string id="Opcode.Demonstration.Operation1" value="おぺ"/>
-        <string id="Level.Yabai" value="やばい"/>
         <string id="Message.Hoge" value="ほげ"/>
         <string id="Message.Hige" value="ひげ"/>
       </stringTable>

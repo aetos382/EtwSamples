@@ -17,7 +17,7 @@
         parameterFileName="Provider1.exe">
 
         <channels>
-          <channel chid="1" name="Test" type="Admin" enabled="true"/>
+          <channel chid="1" name="{3E7764B2-10E3-4396-87D7-0B3A81038806}/Test" type="Admin" enabled="true"/>
         </channels>
 
         <templates>

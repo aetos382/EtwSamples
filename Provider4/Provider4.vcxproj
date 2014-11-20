@@ -94,6 +94,12 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest4.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace4.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -107,6 +113,12 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest4.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace4.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -124,6 +136,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest4.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace4.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -141,11 +159,18 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)ProviderManifest4.man" "$(OutDir)"
+copy /Y "$(ProjectDir)RegisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)UnregisterProvider4.cmd" "$(OutDir)"
+copy /Y "$(ProjectDir)trace4.cmd" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -157,6 +182,27 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ProviderManifest4.man">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mc.exe -n -u -c "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mc.exe -n -u -c "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mc.exe -n -u -c "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mc.exe -n -u -c "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).h;%(Filename).rc;%(Filename)TEMP.BIN;MSG00001.BIN;MSG00002.BIN;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Provider4.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RegisterProvider4.cmd" />
+    <None Include="trace4.cmd" />
+    <None Include="UnregisterProvider4.cmd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
