@@ -335,9 +335,9 @@ VOID ShowPropertyInfo(
             USHORT inType = property->nonStructType.InType;
             USHORT outType = property->nonStructType.OutType;
 
-            wprintf_s(L"\tName : %s\n", propertyName);
-            wprintf_s(L"\t\tInput Type  : %s\n", inTypes[inType]);
-            wprintf_s(L"\t\tOutput Type : %s\n", outTypes[outType]);
+            wprintf_s(L"\tName        : %s\n", propertyName);
+            wprintf_s(L"\tInput Type  : %s\n", inTypes[inType]);
+            wprintf_s(L"\tOutput Type : %s\n", outTypes[outType]);
 
             ShowPropertyValue(inType, outType, buffer);
         }
@@ -353,7 +353,7 @@ VOID ShowPropertyValue(
     USHORT outputType,
     LPCVOID data)
 {
-    wprintf_s(L"\t\t\t");
+    wprintf_s(L"\t\t");
 
     switch (inputType)
     {
@@ -365,4 +365,6 @@ VOID ShowPropertyValue(
             wprintf_s(L"%u\n", *(static_cast<UINT32 const *>(data)));
             break;
     }
+
+    _putws(L"");
 }
